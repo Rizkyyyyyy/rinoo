@@ -1,0 +1,680 @@
+:root {
+    --primary: #1d70b8;
+    --secondary: #4caf50;
+    --accent: #ff9800;
+    --light: #f5f5f5;
+    --dark: #333;
+    --text: #212121;
+    --shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+header {
+    background-color: white;
+    box-shadow: var(--shadow);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    padding: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--text);
+    transition: all 0.3s ease;
+}
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/api/placeholder/1200/600') center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #165c96;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    color: var(--primary);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--secondary);
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px; /* atau tinggi sesuai kebutuhan */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5; /* opsional, warna latar belakang jika ada ruang kosong */
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+/* style.css */
+
+.logo-philosophy-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.logo-explanation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.logo-image {
+    max-width: 250px;
+    height: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+    transform: scale(1.03);
+}
+
+.philosophy-content {
+    text-align: center;
+}
+
+.philosophy-content h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #333;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.philosophy-content h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #4CAF50;
+}
+
+.philosophy-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #444;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.highlight {
+    color: #4CAF50;
+    font-weight: 600;
+}
+
+.conclusion {
+    margin-top: 20px;
+    font-weight: 500;
+    font-style: italic;
+    color: #333;
+}
+
+@media (min-width: 768px) {
+    .logo-explanation {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .logo-container {
+        flex: 0 0 30%;
+        margin-right: 50px;
+        margin-bottom: 0;
+    }
+
+    .philosophy-content {
+        flex: 0 0 60%;
+        text-align: left;
+    }
+
+    .philosophy-content h2:after {
+        left: 0;
+        transform: none;
+    }
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.mission-vision {
+    background-color: white;
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.mission-vision-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mission, .vision {
+    flex: 1;
+    padding: 30px;
+    min-width: 300px;
+}
+
+.mission {
+    background-color: var(--primary);
+    color: white;
+}
+
+.mission h3, .vision h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.mission ul {
+    padding-left: 20px;
+}
+
+.mission li {
+    margin-bottom: 10px;
+}
+
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.stat-item {
+    padding: 20px;
+    min-width: 200px;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.cta {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+}
+
+.cta h2 {
+    margin-bottom: 20px;
+}
+
+.cta .btn {
+    background-color: white;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.cta .btn:hover {
+    background-color: #f0f0f0;
+}
+
+footer {
+    background-color: var(--dark);
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 2rem;
+}
+
+.footer-column h3 {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-column h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: var(--secondary);
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .nav-links {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 25px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .mission, .vision {
+        flex: 100%;
+    }
+}
+/* ======================
+   Struktur Organisasi RINO
+   ====================== */
+
+/* Styling untuk halaman struktur */
+.structure-content {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.structure-content h2 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 2rem;
+}
+
+.structure-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+/* Container diagram organisasi */
+.organizational-chart {
+    margin-top: 3rem;
+    background-color: white;
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.organizational-chart h3 {
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.organizational-chart p:last-child {
+    margin-top: 2rem;
+    font-style: italic;
+    color: #666;
+}
+
+/* Struktur pohon organisasi */
+.org-tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto;
+    max-width: 900px;
+}
+
+/* Styling untuk setiap level */
+.level {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* Box untuk setiap posisi */
+.box {
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 0 10px;
+    text-align: center;
+    position: relative;
+    width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Connector antara level */
+.connector {
+    width: 2px;
+    height: 30px;
+    background-color: #999;
+    margin: 0 auto;
+}
+
+/* Warna berbeda untuk setiap level */
+.level-1 .box {
+    background-color: #f9d77e;
+    border: 2px solid #d4af37;
+}
+
+.level-2 .box {
+    background-color: #a8d5ba;
+    border: 2px solid #2e7d32;
+}
+
+.level-3 .box {
+    background-color: #a8c8d5;
+    border: 2px solid #1565c0;
+}
+
+.level-4 .box {
+    background-color: #d5a8c8;
+    border: 2px solid #7b1fa2;
+    width: 220px;
+}
+
+/* Container untuk multiple box dalam satu level */
+.multi-box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 40px;
+}
+
+/* Styling untuk text dalam box */
+.position {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.name {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Garis horizontal untuk menghubungkan departemen */
+.horizontal-line {
+    height: 2px;
+    background-color: #999;
+    width: 60%;
+    margin: -15px auto 15px;
+}
+
+/* Responsif untuk perangkat mobile */
+@media (max-width: 768px) {
+    .multi-box {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .box {
+        width: 90%;
+        max-width: 280px;
+    }
+    
+    .horizontal-line {
+        display: none;
+    }
+    
+    .level-4 {
+        margin-top: 0;
+    }
+}
